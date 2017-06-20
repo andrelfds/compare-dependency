@@ -84,18 +84,17 @@ public class GradleConnector {
         ProjectConnection connection = connector.connect();
         try{
             IdeaProject project = connection.getModel(IdeaProject.class);
-            for(IdeaModule module : project.getModules()){
-                for(IdeaDependency dependency:   module.getDependencies()){
-                    IdeaSingleEntryLibraryDependency ideaDependency = (IdeaSingleEntryLibraryDependency) dependency;
-                    if(ideaDependency.getScope().getScope().equals("RUNTIME")){
-                    	 System.out.println(ideaDependency.getGradleModuleVersion().getName());
-                         System.out.println(ideaDependency.getGradleModuleVersion().getVersion());
-                         System.out.println(ideaDependency.getScope().getScope());
-                    }
-                    File file = ideaDependency.getFile();
-                    dependencyFiles.add(file);
-                }
-            }
+            project.getModules().forEach(module->
+                    module.getDependencies()
+                            .stream()
+                            .map(dependency -> (IdeaSingleEntryLibraryDependency) dependency)
+                            .filter(s -> s.getScope().getScope().equals("RUNTIME"))
+                            .forEach(ideaDependency-> {
+                                dependencyFiles.add(ideaDependency.getFile());
+                                System.out.println(ideaDependency.getGradleModuleVersion().getName());
+                                System.out.println(ideaDependency.getGradleModuleVersion().getVersion());
+                                System.out.println(ideaDependency.getScope().getScope());
+                            }));
         }finally {
             connection.close();
         }
