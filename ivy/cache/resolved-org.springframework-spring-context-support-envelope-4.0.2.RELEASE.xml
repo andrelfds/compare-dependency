@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+	<info organisation="org.springframework"
+		module="spring-context-support-envelope"
+		revision="4.0.2.RELEASE"
+		status="release"
+		publication="20170619231821"
+		default="true"
+	/>
+	<configurations>
+		<conf name="default" visibility="public"/>
+	</configurations>
+	<publications>
+		<artifact name="spring-context-support-envelope" type="jar" ext="jar" conf="default"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.springframework" name="spring-context-support" rev="4.0.2.RELEASE" transitive="false" conf="default->master"/>
+	</dependencies>
+</ivy-module>

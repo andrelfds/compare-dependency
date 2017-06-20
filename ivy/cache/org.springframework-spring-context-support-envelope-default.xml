@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="org.springframework"
+		module="spring-context-support-envelope"
+		revision="4.0.2.RELEASE"
+		conf="default"
+		confs="default"
+		date="20170619231821"/>
+	<dependencies>
+		<module organisation="org.springframework" name="spring-context-support">
+			<revision name="4.0.2.RELEASE" status="release" pubdate="20140218222504" resolver="central" artresolver="central" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="master" position="0">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4703" time="0" location="/Users/andresilva/Documents/workspace/compare-dependency/ivy/cache/org.springframework/spring-context-support/ivy-4.0.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-context-support/4.0.2.RELEASE/spring-context-support-4.0.2.RELEASE.pom"/>
+				<caller organisation="org.springframework" name="spring-context-support-envelope" conf="default" rev="4.0.2.RELEASE" rev-constraint-default="4.0.2.RELEASE" rev-constraint-dynamic="4.0.2.RELEASE" callerrev="4.0.2.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-context-support" type="jar" ext="jar" status="no" details="" size="135361" time="0" location="/Users/andresilva/Documents/workspace/compare-dependency/ivy/cache/org.springframework/spring-context-support/jars/spring-context-support-4.0.2.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-context-support/4.0.2.RELEASE/spring-context-support-4.0.2.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
